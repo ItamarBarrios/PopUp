@@ -1,0 +1,13 @@
+query ($email:String){
+  documents(
+    acronym:"CL",
+    fields:["email"],
+    where: $email
+  ) {
+    id,
+    fields {
+      key,
+      value
+    }
+  }
+}
